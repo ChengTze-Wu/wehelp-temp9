@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="wehelp-team9" />
-        <title>Weather</title>
-        <script
-            src="https://kit.fontawesome.com/1ed414d8e4.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="stylesheet" href="./static/css/reset.css" />
-        <link rel="stylesheet" href="./static/css/color.css" />
-        <link rel="stylesheet" href="./static/css/base.css" />
-        <link rel="stylesheet" href="./static/css/search.css" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="card">
-                <div class="search">
-                    <i class="search__icon fa-solid fa-magnifying-glass"></i>
-                    <input
-                        class="search__input"
-                        type="text"
-                        placeholder="City"
-                    />
-                    <i class="search__renew_icon fa-solid fa-rotate"></i>
-                </div>
-
-                <div class="nav-date"></div>
-
-                <div class="main-info"></div>
-
-                <div class="second-info"></div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="wehelp-team9" />
+    <title>Weather</title>
+    <script
+      src="https://kit.fontawesome.com/1ed414d8e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./static/css/reset.css" />
+    <link rel="stylesheet" href="./static/css/color.css" />
+    <link rel="stylesheet" href="./static/css/base.css" />
+    <link rel="stylesheet" href="./static/css/search.css" />
+    <link rel="stylesheet" href="./static/css/navdate.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="search">
+          <i class="search__icon fa-solid fa-magnifying-glass"></i>
+          <input class="search__input" type="text" placeholder="City" />
+          <i class="search__renew_icon fa-solid fa-rotate"></i>
         </div>
-        <script src="./static/js/fetch.js"></script>
-        <script src="./static/js/search.js"></script>
-        <script src="./static/js/main.js"></script>
-    </body>
+
+        <div class="nav-date">
+          <div class="nav-date__today_btn">4/18</div>
+          <div class="nav-date__tmr_btn">&gt;</div>
+        </div>
+
+        <div class="main-info"></div>
+
+        <div class="second-info"></div>
+      </div>
+    </div>
+    <script src="./static/js/fetch.js"></script>
+    <script src="./static/js/search.js"></script>
+    <script src="./static/js/main.js"></script>
+  </body>
 </html>
