@@ -10,8 +10,9 @@ async function dataControl() {
     const locationName = search__input.value;
     const result = search__input.value;
     if (result) {
+        let indexDate = 0;
         const rawData = await getWeatherData(result);
-        const data = dataProcess(rawData);
+        const data = dataProcess(rawData, indexDate);
         if (data) {
             search__input.value = "";
             // data : { temp: "str", speed: "str", humid: "str", pop: "str", uv: "str"}
@@ -19,14 +20,10 @@ async function dataControl() {
             console.log(data);
             // locationName
             // nav-date function
-
-            // search__renew_icon
-            search__renew_icon.addEventListener("click",()=>{
-                const rawData = await getWeatherData(result);
-                const data = dataProcess(rawData);
-
-                // render again
-            });
+            // addEventListener("click", () => {
+            //     indexDate = 1;
+            //     const data = dataProcess(rawData, indexDate);
+            // });
         } else {
             search__input.classList.add("error");
         }

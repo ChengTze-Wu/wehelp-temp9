@@ -8,7 +8,7 @@ async function getWeatherData(result) {
     return content;
 }
 
-function dataProcess(rawData) {
+function dataProcess(rawData, indexDate) {
     let temp;
     let speed;
     let humid;
@@ -18,11 +18,11 @@ function dataProcess(rawData) {
     const data = rawData["records"]["locations"][0]["location"][0];
     if (data) {
         const weatherData = data.weatherElement;
-        temp = weatherData[1]["time"][0]["elementValue"][0]["value"];
-        speed = weatherData[4]["time"][0]["elementValue"][0]["value"];
-        humid = weatherData[2]["time"][0]["elementValue"][0]["value"];
-        pop = weatherData[0]["time"][0]["elementValue"][0]["value"];
-        uv = weatherData[9]["time"][0]["elementValue"][0]["value"];
+        temp = weatherData[1]["time"][indexDate]["elementValue"][0]["value"];
+        speed = weatherData[4]["time"][indexDate]["elementValue"][0]["value"];
+        humid = weatherData[2]["time"][indexDate]["elementValue"][0]["value"];
+        pop = weatherData[0]["time"][indexDate]["elementValue"][0]["value"];
+        uv = weatherData[9]["time"][indexDate]["elementValue"][0]["value"];
         result = { temp: temp, speed: speed, humid: humid, pop: pop, uv: uv };
     } else {
         result = null;
