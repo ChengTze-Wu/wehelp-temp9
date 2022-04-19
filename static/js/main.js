@@ -21,7 +21,12 @@ async function dataControl() {
             // nav-date function
 
             // search__renew_icon
-            search__renew_icon.addEventListener("click");
+            search__renew_icon.addEventListener("click",()=>{
+                const rawData = await getWeatherData(result);
+                const data = dataProcess(rawData);
+
+                // render again
+            });
         } else {
             search__input.classList.add("error");
         }
