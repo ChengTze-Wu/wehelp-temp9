@@ -18,7 +18,8 @@ async function dataControl() {
             // data : { temp: "str", speed: "str", humid: "str", pop: "str", uv: "str"}
             // render function: main-info, second-info
             console.log(data);
-            // 測試
+            // 測試1
+            // 測試2
             // locationName
             // nav-date function
             // addEventListener("click", () => {
