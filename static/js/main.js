@@ -8,8 +8,6 @@ const navdate__today_btn = document.querySelector(".nav-date__today_btn");
 // merge here
 async function dataControl() {
     search__input.classList.remove("error");
-    // var
-    const locationName = search__input.value;
     const result = search__input.value;
     if (result) {
         let indexDate = 1;
@@ -70,4 +68,16 @@ navdate__tmr_btn.addEventListener("click", async () => {
         // second-info
         renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
     }
+});
+
+// initload
+window.addEventListener("load", async () => {
+    const rawData = await getWeatherData("台北市");
+    indexDate = 1;
+    indexUv = 0;
+    const data = dataProcess(rawData, indexDate, indexUv);
+    // main-info
+
+    // second-info
+    renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
 });
