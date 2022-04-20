@@ -1,0 +1,38 @@
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    height: 50px;
+}
+
+.search > i {
+    font-size: 20px;
+}
+
+.search > .error {
+    outline: 1px solid rgb(235, 88, 88);
+}
+
+.search__input {
+    flex-grow: 1;
+    border-radius: 10px;
+    padding: 10px;
+    /* height: 100%; */
+    margin: 10px;
+}
+
+.search__icon {
+    transform: rotate(90deg);
+}
+
+.search__icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.search__renew_icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
