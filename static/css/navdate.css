@@ -12,6 +12,8 @@
   border-radius: 50%;
   background-color: var(--main-color);
   cursor: pointer;
+  font-size: 14px;
+  color: white;
 }
 .nav-date__tmr_btn {
   display: flex;
