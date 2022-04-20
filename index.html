@@ -6,8 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="wehelp-team9" />
-        <title></title>
-        <link href="./static/css/main-info.css" rel="stylesheet" type="text/css" media="all" />
+        <title>Weather</title>
+        <script
+            src="https://kit.fontawesome.com/1ed414d8e4.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./static/css/reset.css" />
+        <link rel="stylesheet" href="./static/css/color.css" />
+        <link rel="stylesheet" href="./static/css/search.css" />
+        <link rel="stylesheet" href="./static/css/navdate.css" />
+        <link rel="stylesheet" href="./static/css/second-info.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Noto+Sans+TC:wght@300&family=Source+Code+Pro:ital,wght@0,600;0,700;1,600&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <div class="card">
@@ -22,17 +36,55 @@
                     <img class="main-info__icon" id="cloudy" src="./static/cloudy-day.png"></img>
                     <img class="main-info__icon" id="rainy" src="./static/rainy-day.png"></img>
                 </div>
-                <div class="main-info__right">
-                    <div class="main-info__temp" id="temp">49<p class="main-info__dot">o</p></div>
-                    <div class="main-info__temp-status" id="status">Mostly Sunny</div>
+
+                <div class="main-info"></div>
+
+                <div class="nav-date">
+                    <div class="nav-date__today_btn"></div>
+                    <div class="nav-date__tmr_btn">&gt;</div>
                 </div>
-                <div class="main-info__celsius">c</div>
+
+                <div class="second-info">
+                    <div class="second-info__wind">
+                        <img
+                            class="second-info__wind__pic"
+                            src="./static/img/wind-2.png"
+                            alt=""
+                        />
+                        <div class="second-info__windText"></div>
+                    </div>
+                    <div class="second-info__humid">
+                        <img
+                            class="second-info__humid__pic"
+                            src="./static/img/drop.png"
+                            alt=""
+                        />
+                        <div class="second-info__humidText"></div>
+                    </div>
+                    <div class="second-info__pop">
+                        <img
+                            class="second-info__pop__pic"
+                            src="./static/img/rainy.png"
+                            alt=""
+                        />
+                        <div class="second-info__popText"></div>
+                    </div>
+                    <div class="second-info__uv">
+                        <img
+                            class="second-info__uv__pic"
+                            src="./static/img/uv-protection.png"
+                            alt=""
+                        />
+                        <div class="second-info__uvText"></div>
+                    </div>
+                </div>
             </div>
             <!-- second-info -->
             <div class="second-info"></div>
         </div>
-
-        <script src="fetch.js"></script>
-        <script src="./static/js/main-info.js"></script>
+        <script src="./static/js/search.js"></script>
+        <script src="./static/js/main.js"></script>
+        <script src="./static/js/second-info.js"></script>
+        <script src="./static/js/navdate.js"></script>
     </body>
 </html>

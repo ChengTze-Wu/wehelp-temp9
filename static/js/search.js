@@ -8,7 +8,7 @@ async function getWeatherData(result) {
     return content;
 }
 
-function dataProcess(rawData, indexDate) {
+function dataProcess(rawData, indexDate, indexUv) {
     let temp;
     let speed;
     let humid;
@@ -22,7 +22,7 @@ function dataProcess(rawData, indexDate) {
         speed = weatherData[4]["time"][indexDate]["elementValue"][0]["value"];
         humid = weatherData[2]["time"][indexDate]["elementValue"][0]["value"];
         pop = weatherData[0]["time"][indexDate]["elementValue"][0]["value"];
-        uv = weatherData[9]["time"][indexDate]["elementValue"][0]["value"];
+        uv = weatherData[9]["time"][indexUv]["elementValue"][0]["value"];
         result = { temp: temp, speed: speed, humid: humid, pop: pop, uv: uv };
     } else {
         result = null;

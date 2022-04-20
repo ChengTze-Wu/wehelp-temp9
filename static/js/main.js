@@ -2,30 +2,25 @@
 const search__input = document.querySelector(".search__input");
 const search__icon = document.querySelector(".search__icon");
 const search__renew_icon = document.querySelector(".search__renew_icon");
+const navdate__tmr_btn = document.querySelector(".nav-date__tmr_btn");
+const navdate__today_btn = document.querySelector(".nav-date__today_btn");
 
 // merge here
 async function dataControl() {
     search__input.classList.remove("error");
-    // var
-    const locationName = search__input.value;
     const result = search__input.value;
     if (result) {
-        let indexDate = 0;
+        let indexDate = 1;
+        let indexUv = 0;
         const rawData = await getWeatherData(result);
-        const data = dataProcess(rawData, indexDate);
+        const data = dataProcess(rawData, indexDate, indexUv);
         if (data) {
-            search__input.value = "";
-            // data : { temp: "str", speed: "str", humid: "str", pop: "str", uv: "str"}
-            // render function: main-info, second-info
-            console.log(data);
-            // 測試1
-            // 測試2
-            // locationName
-            // nav-date function
-            // addEventListener("click", () => {
-            //     indexDate = 1;
-            //     const data = dataProcess(rawData, indexDate);
-            // });
+            // render
+            //  { temp: temp, speed: speed, humid: humid, pop: pop, uv: uv }
+            // main-info
+
+            // second-info
+            renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
         } else {
             search__input.classList.add("error");
         }
@@ -45,3 +40,44 @@ search__input.addEventListener(
     },
     false
 );
+// nav-date
+//今日天氣
+navdate__today_btn.addEventListener("click", async () => {
+    const result = search__input.value;
+    if (result) {
+        const rawData = await getWeatherData(result);
+        indexDate = 1;
+        indexUv = 0;
+        const data = dataProcess(rawData, indexDate, indexUv);
+        // main-info
+
+        // second-info
+        renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
+    }
+});
+//明日天氣
+navdate__tmr_btn.addEventListener("click", async () => {
+    const result = search__input.value;
+    if (result) {
+        const rawData = await getWeatherData(result);
+        indexDate = 3;
+        indexUv = 1;
+        const data = dataProcess(rawData, indexDate, indexUv);
+        // main-info
+
+        // second-info
+        renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
+    }
+});
+
+// initload
+window.addEventListener("load", async () => {
+    const rawData = await getWeatherData("台北市");
+    indexDate = 1;
+    indexUv = 0;
+    const data = dataProcess(rawData, indexDate, indexUv);
+    // main-info
+
+    // second-info
+    renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
+});
