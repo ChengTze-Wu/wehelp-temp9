@@ -18,7 +18,7 @@ async function dataControl() {
             // render
             //  { temp: temp, speed: speed, humid: humid, pop: pop, uv: uv }
             // main-info
-
+            renderMainInfo(data);
             // second-info
             renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
         } else {
@@ -50,7 +50,7 @@ navdate__today_btn.addEventListener("click", async () => {
         indexUv = 0;
         const data = dataProcess(rawData, indexDate, indexUv);
         // main-info
-
+        renderMainInfo(data);
         // second-info
         renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
     }
@@ -64,7 +64,7 @@ navdate__tmr_btn.addEventListener("click", async () => {
         indexUv = 1;
         const data = dataProcess(rawData, indexDate, indexUv);
         // main-info
-
+        renderMainInfo(data);
         // second-info
         renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
     }
@@ -77,7 +77,7 @@ window.addEventListener("load", async () => {
     indexUv = 0;
     const data = dataProcess(rawData, indexDate, indexUv);
     // main-info
-
+    renderMainInfo(data);
     // second-info
     renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
 });
