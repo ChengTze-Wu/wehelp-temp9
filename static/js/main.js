@@ -18,6 +18,11 @@ async function dataControl() {
         const data = dataProcess(rawData, indexDate, indexUv);
         if (data) {
             // render
+            //  { temp: temp, speed: speed, humid: humid, pop: pop, uv: uv }
+            // main-info
+
+            // second-info
+            renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
         } else {
             search__input.classList.add("error");
         }
@@ -46,7 +51,10 @@ navdate__today_btn.addEventListener("click", async () => {
         indexDate = 1;
         indexUv = 0;
         const data = dataProcess(rawData, indexDate, indexUv);
-        console.log(data);
+        // main-info
+
+        // second-info
+        renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
     }
 });
 //明日天氣
@@ -57,6 +65,9 @@ navdate__tmr_btn.addEventListener("click", async () => {
         indexDate = 3;
         indexUv = 1;
         const data = dataProcess(rawData, indexDate, indexUv);
-        console.log(data);
+        // main-info
+
+        // second-info
+        renderSecondInfo(data.speed, data.humid, data.pop, data.uv);
     }
 });
