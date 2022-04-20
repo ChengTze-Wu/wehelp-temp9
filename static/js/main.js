@@ -72,6 +72,7 @@ navdate__tmr_btn.addEventListener("click", async () => {
 
 // initload
 window.addEventListener("load", async () => {
+    search__input.value = "臺北市";
     const rawData = await getWeatherData("台北市");
     indexDate = 1;
     indexUv = 0;
