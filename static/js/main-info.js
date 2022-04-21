@@ -12,13 +12,19 @@ function renderMainInfo(data){
     let status;
     if (chanceOfRain<=30){
         sun_img.style.display="block";
+        cloud_img.style.display="none";
+        rain_img.style.display="none";
         status="MOSTLY CLEAR";
     }
     else if (chanceOfRain<=70){
+        sun_img.style.display="none";
         cloud_img.style.display="block";
+        rain_img.style.display="none";
         status="CLOUDY";
     }
     else{
+        sun_img.style.display="none";
+        cloud_img.style.display="none";
         rain_img.style.display="block";
         status="RAINY";
     }
