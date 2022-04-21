@@ -1,0 +1,69 @@
+:root {
+	--main-color: rgba(22, 27, 32, 0.7);
+}
+/* * {
+	font-family: "Kanit", sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
+	font-family: "Source Code Pro", monospace;
+	font-weight: 700;
+	font-size: 18px;
+} */
+
+.second-info {
+	display: flex;
+	/* width: 100px; */
+	justify-content: space-between;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 40px;
+	font-size: 18px;
+}
+
+.second-info__wind__pic,
+.second-info__humid__pic,
+.second-info__uv__pic,
+.second-info__pop__pic {
+	height: 55px;
+	width: 55px;
+	opacity: 0.75;
+	filter: alpha(opacity=40);
+}
+/* .second-info__humid {
+	margin-left: 80px;
+} */
+
+/* .second-info__pop,
+.second-info__uv {
+	margin-left: 90px;
+} */
+
+.windText {
+	display: flex;
+}
+
+.second-info__windText__unit {
+	margin-top: 5px;
+	margin-left: 3px;
+	margin-top: 8px;
+	color: rgba(22, 27, 32, 0.8);
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.second-info__windText,
+.second-info__humidText,
+.second-info__popText,
+.second-info__uvText {
+	margin-top: 10px;
+	color: rgba(22, 27, 32, 0.8);
+}
+.second-info__windText {
+	margin-left: 8px;
+}
+.second-info__humidText,
+.second-info__popText {
+	margin-left: 12px;
+}
+.second-info__uvText {
+	margin-left: 22px;
+}

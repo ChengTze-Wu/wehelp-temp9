@@ -1,25 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="wehelp-team9" />
-        <title></title>
-    </head>
-    <body>
-        <div class="card">
-            <!-- search -->
-            <div class="search"></div>
-            <!-- nav-date -->
-            <div class="nav-date"></div>
-            <!-- main-info -->
-            <div class="main-info"></div>
-            <!-- second-info -->
-            <div class="second-info"></div>
-        </div>
-
-        <script src="fetch.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="wehelp-team9" />
+		<title>Weather</title>
+		<script
+			src="https://kit.fontawesome.com/1ed414d8e4.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./static/css/reset.css" />
+		<link rel="stylesheet" href="./static/css/color.css" />
+		<link rel="stylesheet" href="./static/css/search.css" />
+		<link rel="stylesheet" href="./static/css/navdate.css" />
+    	<link rel="stylesheet" href="./static/css/main-info.css" />
+		<link rel="stylesheet" href="./static/css/second-info.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Noto+Sans+TC:wght@300&family=Source+Code+Pro:ital,wght@0,600;0,700;1,600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<div class="search">
+					<i class="search__icon fa-solid fa-magnifying-glass"></i>
+					<input class="search__input" type="text" placeholder="City" />
+				</div>
+				<div class="nav-date">
+					<div class="nav-date__today_btn"></div>
+					<div class="nav-date__tmr_btn">&gt;</div>
+				</div>
+				<div class="main-info">
+					<div class="main-info__left">
+						<img class="main-info__icon" id="sunny" src="./static/sunny-day.png">
+						<img class="main-info__icon" id="cloudy" src="./static/cloudy-day.png">
+						<img class="main-info__icon" id="rainy" src="./static/rainy-day.png">
+					</div>
+					<div class="main-info__right">
+						<div class="main-info__temp" id="temp"></div>
+						<div class="main-info__temp-status" id="status"></div>
+					</div>
+					<div class="main-info__celsius">c</div>
+				</div>
+				<div class="second-info">
+					<div class="second-info__wind">
+						<img
+							class="second-info__wind__pic"
+							src="./static/img/wind-2.png"
+							alt=""
+						/>
+					<div class="windText">
+						<div class="second-info__windText"></div>
+						<div class="second-info__windText__unit"></div>
+					</div>
+				</div>
+				<div class="second-info__humid">
+					<img
+						class="second-info__humid__pic"
+						src="./static/img/drop.png"
+						alt=""
+					/>
+					<div class="second-info__humidText"></div>
+				</div>
+				<div class="second-info__pop">
+					<img
+						class="second-info__pop__pic"
+						src="./static/img/rainy.png"
+						alt=""
+					/>
+					<div class="second-info__popText"></div>
+				</div>
+				<div class="second-info__uv">
+					<img
+						class="second-info__uv__pic"
+						src="./static/img/uv-protection.png"
+						alt=""
+					/>
+					<div class="second-info__uvText"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./static/js/search.js"></script>
+		<script src="./static/js/main.js"></script>
+		<script src="./static/js/main-info.js"></script>
+		<script src="./static/js/second-info.js"></script>
+		<script src="./static/js/navdate.js"></script>
+	</body>
 </html>
