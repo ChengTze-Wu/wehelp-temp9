@@ -6,7 +6,7 @@ function renderMainInfo(data){
     let main_info__status=document.getElementById("status");
     
     let temperature=data.temp;
-    main_info__temp.innerHTML=temperature;
+    main_info__temp.innerHTML=temperature+'<p class="main-info__dot">o</p>';
 
     let chanceOfRain=data.pop;
     let status;
